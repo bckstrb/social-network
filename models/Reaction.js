@@ -4,7 +4,7 @@ const reactionSchema = new mongoose.Schema({
   reactionId: {},
     //Use Mongoose's ObjectId data type
     //Default value is set to a new ObjectId
-  reactionBody: {type: String, require: true, }, //280 character maximum
+  reactionBody: {type: String, require: true, maxLength: 280}, 
   username: {type: String, require: true},
   createdAt: {type: Date, default: Date.now, }, //Use a getter method to format the timestamp on query
 });

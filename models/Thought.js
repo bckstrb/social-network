@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const thoughtSchema = new mongoose.Schema({
-  thoughtText: {type: String, require: true, }, //Must be between 1 and 280 characters
+  thoughtText: {type: String, require: true, maxLength: 280}, 
   createdAt: {type: Date, default: Date.now, }, //Use a getter method to format the timestamp on query
   // you may also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps
   username: {type: String, require: true},
